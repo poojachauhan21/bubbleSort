@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bubble sort</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    
+      var num;
+      num = prompt("Enter the size of array : ");
+      var arr = new Array();
+      document.writeln("----------ARRAY BEFORE SORTING----------"+"<br>");
+      document.write("\n");
+      for (var i = 0; i < num; i++) {
+        arr.push(prompt("Enter " + num + " elements : "));
+        document.writeln("Arr["+i+"] : "+ arr[i] + "<br>");
+      }
+      function bubbleSort() {
+        for (var i = 0; i < arr.length - 1; i++) {
+          for (var j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+              var t = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = t;
+            }
+          }
+        }
+        
+        document.writeln("<br>" + "----------ARRAY AFTER SORTING----------"+"<br>");
+        for (var i = 0; i < num; i++) {
+          document.writeln("Arr["+i+"] : "+ arr[i] + "<br>");
+        }
+      }
+
+      bubbleSort();
+      
+    </script>
+  </body>
+</html>
